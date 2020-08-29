@@ -35,7 +35,7 @@ const Profile = () => {
                     </View>
                     <View style={styles.profInfo}>
                         <Text style={styles.name}>
-                            Jane Frost
+                            Jane Doe
                         </Text>
                         <Text style={styles.username}>
                             jane_123
