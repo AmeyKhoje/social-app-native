@@ -20,8 +20,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#4b6f61',
         top: 0,
         left: 0,
-        right: 0,
-        zIndex: 9
+        // right: 0,
+        zIndex: 9,
+        // flex: 1
     },
     brandText: {
         fontSize: 22,

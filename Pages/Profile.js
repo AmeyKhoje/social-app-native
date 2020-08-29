@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import {ScrollView, View, Image, Text, StyleSheet, StatusBar, Dimensions} from 'react-native'
+import {ScrollView, View, Image, Text, StyleSheet, StatusBar, Dimensions, SafeAreaView} from 'react-native'
 import { useFonts, Poppins_400Regular, Poppins_500Medium, Poppins_600SemiBold } from '@expo-google-fonts/poppins'
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font'
+// import SlidingUpPanel from 'rn-sliding-up-panel'
 
 const loadFont = () => {
     return Font.loadAsync({
@@ -22,8 +23,9 @@ const Profile = () => {
         );
     }
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
-            <View style={{backgroundColor: '#f1efd8', marginTop: StatusBar.currentHeight, height: screenHeight}}>
+        <SafeAreaView>
+            <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={{backgroundColor: '#ecf4f1', height: screenHeight - 55}}>
                 <View>
                     <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSIcUHqpf88Rq-eW8LwxaZOLc2ESPDBnklexw&usqp=CAU' }} style={{ height: 300, width: '100%' }} />
                 </View>
@@ -73,12 +75,13 @@ const Profile = () => {
                     </View>
                 </View>
                 <View style={{paddingHorizontal: 15, flex: 1}}>
-                    <Text style={{fontSize: 18, color: '#26282a', marginTop: 275, fontFamily: 'poppins-semibold'}}>
-                        Popular Posts
+                    <Text style={{fontSize: 20, color: '#26282a', marginTop: 275, fontFamily: 'poppins-semibold'}}>
+                        Posts
                     </Text>
                 </View>
             </View>
         </ScrollView>
+        </SafeAreaView>
     )
 }
 
@@ -108,17 +111,17 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '700',
         textAlign: 'center',
-        marginBottom: 10,
+        marginBottom: 0,
         marginTop: 20,
         fontFamily: 'poppins-semibold',
         // lineHeight: 1,
         justifyContent: 'center',
-        color: '#000',
-        lineHeight: 21
+        color: '#080e2c',
+        lineHeight: 20
     },
     username: {
         fontSize: 15,
-        color: 'rgba(0, 0, 0, 0.6)',
+        color: 'rgba(8, 14, 44, 0.5)',
         textAlign: 'center',
         fontFamily: 'poppins-medium'
     },
@@ -127,22 +130,23 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontFamily: 'poppins-semibold',
         marginBottom: 0,
-        color: '#fff',
-        lineHeight: 20
+        color: '#ecf4f1',
+        lineHeight: 20,
+        backgroundColor: 'transparent'
         // fontWeight: '700'
     },
     postCountHead: {
         textAlign: 'center',
         fontSize: 16,
         fontFamily: 'poppins-semibold',
-        color: '#fff'
+        color: '#ecf4f1'
         // fontWeight: '700'
     },
     countCont: {
         marginTop: 15,
         padding: 10,
         textAlign: 'center',
-        backgroundColor: '#4b6f61',
+        backgroundColor: 'rgba(8,14,44,1)',
         borderRadius: 10,
         width: 90,
         marginHorizontal: 'auto',
@@ -156,7 +160,7 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         marginHorizontal: 15,
-        backgroundColor: '#aec7bc',
+        backgroundColor: '#d1e0db',
         top: 150,
         padding: 15,
         borderRadius: 20,

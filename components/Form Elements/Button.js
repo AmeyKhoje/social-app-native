@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#f14c76',
         borderRadius: 3,
-        color: '#fff',
+        color: '#080e2c',
         shadowColor: '#000',
         shadowOpacity: 1.0,
         shadowRadius: 5,
@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
         marginVertical: 5,
     },
     primary: {
-        backgroundColor: '#4b6f61',
+        backgroundColor: '#44d6e9',
+        color: '#080e2c',
     },
     danger: {
         backgroundColor: '#c61e2d',
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'green'
     },
     btnText: {
-        color: '#fff',
+        color: '#080e2c',
         fontWeight: 'bold',
         fontSize: 20
     }

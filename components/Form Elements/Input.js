@@ -9,7 +9,7 @@ const Input = (props) => {
     }
 
     return (
-        <TextInput style={[styles.input, isFocused ? styles.inputFocused : null]} onFocus={handleFocus} onBlur={handleFocus} onChange={props.onChange} />
+        <TextInput style={[styles.input, isFocused ? styles.inputFocused : null]} onFocus={handleFocus} onBlur={handleFocus} onChangeText={props.onChange} value={props.value} name={props.name} />
     );
 }
 
@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
         paddingHorizontal: 7,
         paddingVertical: 5,
         borderRadius: 5,
-        borderColor: '#26282a',
-        borderWidth: 2,
+        borderColor: '#777f8a',
+        borderWidth: 1,
         width: '100%',
         marginVertical: 5
     },
     inputFocused: {
         borderWidth: 3,
-        borderColor: '#000999'
+        borderColor: '#e0e0e0'
     }
 })
 
